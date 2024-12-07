@@ -1,4 +1,6 @@
-import { Box, Card, Inset, Strong, Text } from "@radix-ui/themes"
+import PropTypes from "prop-types"
+import { Box, Card, Inset, Text } from "@radix-ui/themes"
+
 
 export const GifItem = ({title, url}) => {
   return (
@@ -22,6 +24,10 @@ export const GifItem = ({title, url}) => {
         </Text>
       </Card>
     </Box>
-
   )
+}
+
+GifItem.propTypes = {
+  title: PropTypes.string.isRequired, 
+  url: PropTypes.string.isRequired
 }

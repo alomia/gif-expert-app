@@ -1,8 +1,9 @@
-import { MagnifyingGlassIcon } from '@radix-ui/react-icons'
-import { TextField } from '@radix-ui/themes'
 import { useState } from 'react'
+import PropTypes from 'prop-types'
+import { TextField } from '@radix-ui/themes'
+import { MagnifyingGlassIcon } from '@radix-ui/react-icons'
 
-export const AddCategory = ({onNewCategory}) => {
+export const AddCategory = ({ onNewCategory }) => {
   const [inputValue, setInputValue] = useState('')
 
   const handleInputChange = ({ target }) => {
@@ -34,4 +35,8 @@ export const AddCategory = ({onNewCategory}) => {
       </TextField.Root>
     </form>
   )
+}
+
+AddCategory.propTypes = {
+  onNewCategory: PropTypes.func.isRequired
 }

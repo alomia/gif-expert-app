@@ -1,8 +1,9 @@
-import { Box, Button, Flex, IconButton, Spinner } from "@radix-ui/themes";
+import { Box, Button, Flex, Spinner } from "@radix-ui/themes";
 import { Cross2Icon } from "@radix-ui/react-icons";
 
 import { GifItem } from "./GifItem";
 import { useFetchGifs } from "../hooks/useFetchGifs";
+import PropTypes from "prop-types";
 
 
 export const GifGrid = ({ category, onRemoveCategory }) => {
@@ -48,4 +49,9 @@ export const GifGrid = ({ category, onRemoveCategory }) => {
       }
     </>
   )
+}
+
+GifGrid.propTypes = {
+  category: PropTypes.string.isRequired,
+  onRemoveCategory: PropTypes.func.isRequired
 }
